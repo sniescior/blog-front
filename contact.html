@@ -5,8 +5,59 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact</title>
+    <link rel="stylesheet" href="main.css">
 </head>
 <body>
-    <h1>Contact</h1>
+    <header>
+        <h1 class="logo">
+            <a href="index.html">Blog</a>
+        </h1>
+        <nav>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="about.html">About</a></li>
+        </nav>
+    </header>
+    <section>
+      <h2 class="section-title">Get in touch</h2>
+
+      <div class="contact-form">
+        <form action="" method="POST">
+            <div class="input-container">
+                <div class="input-wrapper">
+                    <label for="name">Your name</label>
+                    <input type="text" placeholder="Adam Kowalski" required name="name">
+                </div>
+                <div class="input-wrapper">
+                    <label for="email">Your email</label>
+                    <input type="email" placeholder="email@example.com" required name="email">
+                </div>
+                <div class="input-wrapper">
+                    <label for="interest">What are you interested in?</label>
+                    <input type="text" placeholder="Adam Kowalski" required name="interest">
+                </div>
+                <div class="input-wrapper">
+                    <label for="phone">Your phone number</label>
+                    <input type="number" placeholder="+48 123 456 789" required name="phone">
+                </div>
+            </div>        
+            <div class="input-wrapper content">
+                <label for="message">Message</label>
+                <!-- <input type="textarea" name="message" placeholder="Message" required> -->
+                <textarea name="message" id="textarea" cols="30" rows="10"></textarea>
+            </div>
+        </form>
+      </div>
+    </section>
+    <footer>
+        <h3>
+          Subscribe today
+        </h3>
+        <h4>
+          Enter your email and register to a free newsletter
+        </h4>
+        <form action="" method="POST">
+          <input type="email" placeholder="email@example.com" name="newsletterEmail">
+        </form>
+    </footer>
 </body>
 </html>
