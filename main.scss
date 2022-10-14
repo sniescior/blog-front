@@ -1,0 +1,233 @@
+$color_white: #FFF7E9;
+$dimmed_color_white: rgb(133, 133, 133);
+
+$color_orange: #FF731D;
+
+$color_light_blue: #5F9DF7;
+$dimmed_color_light_blue: #5f9cf74a;
+
+$color_navy_blue: #1746A2;
+$color_dark_navy_blue: #06283D;
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 8px 30px;
+
+        .logo {
+            a {
+                font-weight: 800;
+                text-decoration: none;
+                color: $color_light_blue;
+                transition: .2s ease-in-out;
+
+                &:hover {
+                    color: $color_navy_blue;
+                }
+            }
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            list-style-type: none;
+
+            li {
+                a {
+                    color: $color_light_blue;
+                    text-decoration: none;
+                    font-weight: 600;
+                    transition: .2s ease-in-out;
+
+                    &::after {
+                        content: '';
+                        display: block;
+                        width: 100%;
+                        height: 2px;
+                        background-color: transparent;
+                        transition: .2s ease-in-out;
+                    }
+                }
+
+                &:hover {
+                    a {
+                        color: $color_navy_blue;
+
+                        &::after {
+                            content: '';
+                            display: block;
+                            width: 100%;
+                            height: 2px;
+                            background-color: $color_navy_blue;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    section {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 1200px;
+
+        .section-title {
+            color: $color_dark_navy_blue;
+            font-size: 6em;
+            margin: 0;
+            padding: 10px 8px 18px 8px;
+        }
+
+        .content {
+            .post-card {
+                display: flex;
+                transition: .2s ease-in-out;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: #eee;
+                    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+                    .post-background {
+                        img {
+                            transform: scale(1.2);
+                        }
+                    }
+                }
+
+                .post-description {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    padding: 20px;
+                    padding-left: 30px;
+
+                    .date {
+                        font-weight: 400;
+                        color: $dimmed_color_white;
+                    }
+
+                    .title {
+                        padding: 0;
+                        margin: 0;
+                        font-weight: 800;
+                        color: $color_dark_navy_blue;
+                    }
+
+                    .sub-title {
+                        font-weight: 400;
+                        color: $dimmed_color_white;
+                    }
+                }
+
+                .post-background {
+                    overflow: hidden;
+                    
+                    img {
+                        height: 100%;
+                        width: 100%;
+                        object-position: center;
+                        object-fit: cover;
+                        transition: .2s ease-in-out;
+                    }
+                }
+            }
+
+            .post-of-the-day-container {
+                .post-card {
+                    .post-background {
+                        height: 400px;
+                        width: 100%;
+                    }
+
+                    .post-description {
+                        .title {
+                            font-size: 4.2em;
+                        }
+                    }
+                }
+            }
+
+            .posts-container {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                margin-top: 30px;
+                padding: 40px 0;
+                justify-content: center;
+                gap: 24px;
+
+                .post-background {
+                    height: 230px;
+                }
+                
+                .post-card {
+                    flex-direction: column;
+
+                    .post-description {
+                        padding: 10px 8px;
+
+                        .date {
+                            margin: 8px 0;
+                        }
+                    }
+
+                    .post-background {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 40px 0 80px 0;
+        text-align: center;
+        background-color: rgba(17, 17, 17, 0.109);
+        box-shadow: rgba(149, 157, 165, 0.9) 0px 8px 24px;
+
+        h3 {
+            font-size: 2em;
+            color: $color_dark_navy_blue;
+            margin: 0;
+            padding: 0;
+        }
+        
+        h4 {
+            color: $dimmed_color_white;
+            margin: 16px 0;
+        }
+
+        input {
+            box-sizing: border-box;
+            margin: 0;
+            font-size: 1.3em;
+            border: none;
+            outline: none;
+            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+            padding: 12px 30px;
+            border-radius: 12px;
+            width: 100%;
+            max-width: 500px;
+            color: $dimmed_color_white;
+            transition: .2s ease-in-out;
+            
+            &:focus,
+            &:hover {
+                box-shadow: rgba(149, 157, 165, 0.5) 0px 8px 24px;
+            }
+        }
+    }
+}
