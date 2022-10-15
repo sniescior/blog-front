@@ -31,9 +31,18 @@
                     <label for="email">Your email</label>
                     <input type="email" placeholder="email@example.com" required name="email">
                 </div>
-                <div class="input-wrapper">
+                <div class="input-wrapper dropdown">
                     <label for="interest">What are you interested in?</label>
-                    <input type="text" placeholder="Adam Kowalski" required name="interest">
+                    <div class="dropdown-value" id="interest-dropdown-value" onclick="toggleDropdown(this)"></div>
+                    <ul class="dropdown-list" id="interest-dropdown-list"></ul>
+                    <div class="dropdown-content">
+                        <select name="interestSelect" id="interest-select-options">
+                            <option value="0">Consulting</option>
+                            <option value="1">Help or guidance</option>
+                            <option value="2">Business solutions</option>
+                            <option value="3">Something else</option>
+                        </select>
+                    </div>
                 </div>
                 <div class="input-wrapper">
                     <label for="phone">Your phone number</label>
@@ -70,5 +79,7 @@
             <a class="button-link" href="https://github.com/sniescior" target="_blank">GITHUB</a>
           </div>
     </footer>
+
+    <script type="text/javascript" src="main.js"></script>
 </body>
 </html>

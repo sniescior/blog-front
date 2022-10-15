@@ -235,10 +235,38 @@ body section .contact-form .input-wrapper {
   display: flex;
   flex-direction: column;
 }
+body section .contact-form .input-wrapper.dropdown {
+  position: relative;
+}
+body section .contact-form .input-wrapper.dropdown select {
+  display: none;
+}
 body section .contact-form .input-wrapper label {
   color: #06283D;
   margin: 8px 0 8px 12px;
 }
+body section .contact-form .input-wrapper .dropdown-value {
+  height: 100%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+body section .contact-form .input-wrapper .dropdown-value:after {
+  position: absolute;
+  content: "";
+  top: 50%;
+  transform: translateY(-15%);
+  right: 15px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: #06283D transparent transparent transparent;
+}
+body section .contact-form .input-wrapper .dropdown-value p {
+  margin: 0;
+}
+body section .contact-form .input-wrapper .dropdown-value,
 body section .contact-form .input-wrapper textarea,
 body section .contact-form .input-wrapper input {
   padding: 14px 18px;
@@ -250,23 +278,84 @@ body section .contact-form .input-wrapper input {
   outline: none;
   box-sizing: border-box;
 }
-body section .contact-form .input-wrapper textarea::-moz-placeholder, body section .contact-form .input-wrapper input::-moz-placeholder {
+body section .contact-form .input-wrapper .dropdown-value::-moz-placeholder, body section .contact-form .input-wrapper textarea::-moz-placeholder, body section .contact-form .input-wrapper input::-moz-placeholder {
   color: rgba(17, 17, 17, 0.28);
 }
-body section .contact-form .input-wrapper textarea:-ms-input-placeholder, body section .contact-form .input-wrapper input:-ms-input-placeholder {
+body section .contact-form .input-wrapper .dropdown-value:-ms-input-placeholder, body section .contact-form .input-wrapper textarea:-ms-input-placeholder, body section .contact-form .input-wrapper input:-ms-input-placeholder {
   color: rgba(17, 17, 17, 0.28);
 }
+body section .contact-form .input-wrapper .dropdown-value::placeholder,
 body section .contact-form .input-wrapper textarea::placeholder,
 body section .contact-form .input-wrapper input::placeholder {
   color: rgba(17, 17, 17, 0.28);
 }
+body section .contact-form .input-wrapper .dropdown-value:hover,
 body section .contact-form .input-wrapper textarea:hover,
 body section .contact-form .input-wrapper input:hover {
   box-shadow: rgba(149, 157, 165, 0.5) 0px 8px 24px;
 }
+body section .contact-form .input-wrapper .dropdown-value:focus,
 body section .contact-form .input-wrapper textarea:focus,
 body section .contact-form .input-wrapper input:focus {
   box-shadow: rgba(149, 157, 165, 0.5) 0px 8px 24px;
+}
+body section .contact-form .input-wrapper.opened .dropdown-list {
+  top: 100%;
+  z-index: 10000;
+  opacity: 1;
+  pointer-events: all;
+  max-height: 500px;
+  overflow-y: scroll;
+}
+body section .contact-form .input-wrapper.opened .dropdown-value {
+  box-shadow: rgba(149, 157, 165, 0.5) 0px 8px 24px;
+  border-radius: 12px 12px 0 0;
+}
+body section .contact-form .input-wrapper .dropdown-list {
+  position: absolute;
+  top: 80%;
+  z-index: -100;
+  opacity: 0;
+  pointer-events: none;
+  list-style-type: none;
+  margin: 0;
+  padding: 10px 8px;
+  background-color: rgb(254, 254, 254);
+  width: 100%;
+  box-sizing: border-box;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 48px;
+  border-radius: 0 0 12px 12px;
+  transition: 0.2s ease-in-out;
+}
+body section .contact-form .input-wrapper .dropdown-list .dropdown-list-item {
+  margin: 4px 0;
+  padding: 10px 14px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 12px;
+  color: #06283D;
+  cursor: pointer;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 10px;
+  transition: 0.1s ease-in-out;
+}
+body section .contact-form .input-wrapper .dropdown-list .dropdown-list-item.selected .checkbox {
+  box-shadow: 0 0 0 2pt #5F9DF7;
+  border-color: #fff;
+  background-color: #5F9DF7;
+}
+body section .contact-form .input-wrapper .dropdown-list .dropdown-list-item:hover {
+  background-color: rgba(238, 238, 238, 0.35);
+}
+body section .contact-form .input-wrapper .dropdown-list .dropdown-list-item .checkbox {
+  display: block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid #5F9DF7;
+  transition: 0.2s ease-in-out;
 }
 body section .contact-form .input-wrapper.content {
   margin-top: 60px;
