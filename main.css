@@ -22,6 +22,15 @@ body .button-primary.big {
   padding: 8px 12px;
   font-size: 1.5em;
 }
+body .button-link {
+  color: #5F9DF7;
+  transition: 0.2s ease-in-out;
+  text-decoration: none;
+}
+body .button-link:hover {
+  color: #1746A2;
+  text-decoration: underline;
+}
 body .content-center {
   display: flex;
   justify-content: center;
@@ -217,15 +226,6 @@ body section .content .more-actions {
   text-align: center;
   padding-bottom: 40px;
 }
-body section .content .more-actions a {
-  color: #5F9DF7;
-  transition: 0.2s ease-in-out;
-  text-decoration: none;
-}
-body section .content .more-actions a:hover {
-  color: #1746A2;
-  text-decoration: underline;
-}
 body section .contact-form .input-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -326,4 +326,19 @@ body footer input::placeholder {
 }
 body footer input:focus, body footer input:hover {
   box-shadow: rgba(149, 157, 165, 0.5) 0px 8px 24px;
+}
+body footer .footer-info {
+  padding: 8px 30px;
+  width: 100%;
+  text-align: left;
+  box-sizing: border-box;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+body footer .footer-info h4 {
+  margin: 0;
+}
+body footer .footer-info h4 span {
+  font-size: 1.2em;
 }/*# sourceMappingURL=main.css.map */

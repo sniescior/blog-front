@@ -36,6 +36,17 @@ body {
         }
     }
 
+    .button-link {
+        color: $color_light_blue;
+        transition: .2s ease-in-out;
+        text-decoration: none;
+            
+        &:hover {
+            color: $color_navy_blue;
+            text-decoration: underline;
+        }
+    }
+
     .content-center {
         display: flex;
         justify-content: center;
@@ -265,17 +276,6 @@ body {
             .more-actions {
                 text-align: center;
                 padding-bottom: 40px;
-
-                a {
-                    color: $color_light_blue;
-                    transition: .2s ease-in-out;
-                    text-decoration: none;
-                    
-                    &:hover {
-                        color: $color_navy_blue;
-                        text-decoration: underline;
-                    }
-                }
             }
         }
 
@@ -381,6 +381,24 @@ body {
             &:focus,
             &:hover {
                 box-shadow: rgba(149, 157, 165, 0.5) 0px 8px 24px;
+            }
+        }
+
+        .footer-info {
+            padding: 8px 30px;
+            width: 100%;
+            text-align: left;
+            box-sizing: border-box;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+
+            h4 {
+                margin: 0;
+
+                span {
+                    font-size: 1.2em;
+                }
             }
         }
     }
