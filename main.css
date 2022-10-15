@@ -4,6 +4,30 @@ body {
   margin: 0;
   box-sizing: border-box;
 }
+body .button-primary {
+  background-color: #06283D;
+  border: none;
+  color: #FFF7E9;
+  margin: 0;
+  border-radius: 12px;
+  font-size: 1.3em;
+  padding: 0 12px;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+body .button-primary:hover {
+  background-color: #1746A2;
+}
+body .button-primary.big {
+  padding: 8px 12px;
+  font-size: 1.5em;
+}
+body .content-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px 10px;
+}
 body header {
   display: flex;
   justify-content: space-between;
@@ -97,6 +121,7 @@ body section .content .post-card .post-description .sub-title {
 }
 body section .content .post-card .post-background {
   overflow: hidden;
+  position: relative;
 }
 body section .content .post-card .post-background img {
   height: 100%;
@@ -106,6 +131,57 @@ body section .content .post-card .post-background img {
   -o-object-fit: cover;
      object-fit: cover;
   transition: 0.2s ease-in-out;
+}
+body section .content .post-card .post-background .loader-ring {
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80px;
+  height: 80px;
+  z-index: -1;
+}
+body section .content .post-card .post-background .loader-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border: 8px solid #5F9DF7;
+  border-radius: 50%;
+  -webkit-animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+          animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #5F9DF7 transparent transparent transparent;
+}
+body section .content .post-card .post-background .loader-ring div:nth-child(1) {
+  -webkit-animation-delay: -0.45s;
+          animation-delay: -0.45s;
+}
+body section .content .post-card .post-background .loader-ring div:nth-child(2) {
+  -webkit-animation-delay: -0.3s;
+          animation-delay: -0.3s;
+}
+body section .content .post-card .post-background .loader-ring div:nth-child(3) {
+  -webkit-animation-delay: -0.15s;
+          animation-delay: -0.15s;
+}
+@-webkit-keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 body section .content .post-of-the-day-container .post-card .post-background {
   height: 400px;
@@ -136,6 +212,19 @@ body section .content .posts-container .post-card .post-description .date {
 }
 body section .content .posts-container .post-card .post-background {
   width: 100%;
+}
+body section .content .more-actions {
+  text-align: center;
+  padding-bottom: 40px;
+}
+body section .content .more-actions a {
+  color: #5F9DF7;
+  transition: 0.2s ease-in-out;
+  text-decoration: none;
+}
+body section .content .more-actions a:hover {
+  color: #1746A2;
+  text-decoration: underline;
 }
 body section .contact-form .input-container {
   display: grid;
@@ -206,6 +295,10 @@ body footer h3 {
 body footer h4 {
   color: rgb(133, 133, 133);
   margin: 16px 0;
+}
+body footer .flex-wrapper {
+  display: flex;
+  gap: 10px;
 }
 body footer input {
   box-sizing: border-box;
