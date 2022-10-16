@@ -4,6 +4,14 @@ body {
   margin: 0;
   box-sizing: border-box;
 }
+body .divider {
+  display: block;
+  background-color: rgb(133, 133, 133);
+  width: 300px;
+  height: 3px;
+  margin: 40px auto 40px auto;
+  box-sizing: border-box;
+}
 body .button-primary {
   background-color: #06283D;
   border: none;
@@ -14,6 +22,10 @@ body .button-primary {
   padding: 0 12px;
   cursor: pointer;
   transition: 0.2s ease-in-out;
+}
+body .button-primary.rectangle {
+  border-radius: 8px;
+  padding: 10px 20px;
 }
 body .button-primary:hover {
   background-color: #1746A2;
@@ -364,6 +376,41 @@ body section .contact-form .input-wrapper.content textarea {
   resize: vertical;
   min-height: 180px;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+body section .about-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+body section .about-wrapper .title {
+  width: 100%;
+  text-align: center;
+}
+body section .about-wrapper .title.small {
+  font-size: 0.9em;
+  color: rgb(133, 133, 133);
+  font-weight: 600;
+}
+body section .about-wrapper .title.main {
+  font-size: 1.9em;
+  color: #06283D;
+  margin: 0;
+}
+body section .about-wrapper .about-paragraph {
+  line-height: 30px;
+  color: rgb(133, 133, 133);
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+}
+body section .about-wrapper .button-wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 body footer {
   display: flex;
