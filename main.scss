@@ -9,6 +9,8 @@ $dimmed_color_light_blue: #5f9cf74a;
 $color_navy_blue: #1746A2;
 $color_dark_navy_blue: #06283D;
 
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css");
+
 body {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     padding: 0;
@@ -485,6 +487,175 @@ body {
                 display: flex;
                 align-items: center;
                 gap: 12px;
+            }
+        }
+
+        .post-header {
+            text-align: center;
+            padding: 20px;
+            padding-top: 80px;
+            margin-left: auto;
+            margin-right: auto;
+            
+            .title {
+                font-size: 2.5em;
+                margin: 0;
+                margin-top: 9px;
+                margin-bottom: 12px;
+                max-width: 700px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            
+            .sub-title {
+                color: $dimmed_color_white;
+                max-width: 920px;
+                margin-left: auto;
+                margin-right: auto;
+                letter-spacing: 1.2px;
+                margin-bottom: 40px;
+                font-size: 1.2em;
+            }
+
+            img {
+                width: 100%;
+                object-fit: cover;
+                max-height: 600px;
+            }
+        }
+        
+        .info-wrapper {
+            padding: 8px 28px;
+            padding-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .author-info {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                gap: 10px;
+                margin: 0;
+                padding: 0;
+                
+                img {
+                    width: 50px;
+                    height: 50px;
+                    object-fit: cover;
+                    border-radius: 50%;
+                }
+
+                .description {
+                    display: grid;
+                    align-items: center;
+                    gap: 5px;
+
+                    .name {
+                        font-size: 1.2em;
+                        color: $color_dark_navy_blue;
+                        margin: 0;
+                    }
+
+                    .spot {
+                        display: inline-block;
+                        width: 6px;
+                        height: 6px;
+                        margin: 3px;
+                        margin-bottom: 3px;
+                        background-color: $dimmed_color_white;
+                        border-radius: 50%;
+
+                    }
+                    
+                    .details {
+                        color: $dimmed_color_white;
+                        margin: 0;
+                    }
+                }
+            }
+
+            .button-wrapper {
+                display: flex;
+                gap: 10px;
+
+                button {
+                    border: 1px solid $dimmed_color_white;
+                    background-color: transparent;
+                    font-size: 1.2em;
+                    padding: 8px 10px;
+                    border-radius: 8px;
+
+                    i {
+                        &.mr {
+                            margin-right: 8px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .post-content {
+            padding: 18px 28px 80px 28px;
+            display: flex;
+            gap: 10px;
+
+            .headlines {
+                flex: 2;
+                margin: 0;
+                padding: 0;
+                list-style-type: none;
+
+                .headlines-title {
+                    color: $dimmed_color_white;
+                    font-size: .8em;
+                }
+
+                li {
+                    margin: 12px 0;
+                    font-weight: 500;
+                    color: $color_dark_navy_blue;
+                    padding: 10px 20px;
+                    border-radius: 5px;
+
+                    &.active {
+                        background-color: #eee;
+                        font-weight: 700;
+                    }
+                }
+            }
+
+            .text-content {
+                flex: 5;
+
+                .text {
+                    height: auto;
+                    display: flex;
+                    font-weight: 500;
+
+                    .highlight {
+                        display: block;
+                    }
+
+                    p {
+                        margin: 18px;
+                        font-size: 1.2em;
+                    }
+
+                    &.highlighted {
+                        font-weight: 700;
+                        position: relative;
+                        padding-left: 20px;
+                        box-sizing: border-box;
+                        border-left: 8px solid $color_navy_blue;
+                        padding-left: 0px;
+                        margin-left: 18px;
+
+                        p {
+                            margin-left: 15px;
+                        }
+                    }
+                }
             }
         }
     }
